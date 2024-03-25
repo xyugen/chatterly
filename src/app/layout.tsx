@@ -3,6 +3,8 @@ import '@/app/globals.css'
 import { Poppins as FontPoppins } from 'next/font/google'
 
 import { cn } from '@/lib/utils'
+import { Button, buttonVariants } from '@/components/ui/button'
+import Link from 'next/link'
 
 const fontPoppins = FontPoppins({
     subsets: ['latin'],
@@ -17,14 +19,15 @@ const layout = (
     <html lang='en'>
         <body
             className={cn(
-                'bg-slate-900 min-h-screen font-poppins antialiased',
+                'bg-slate-900 font-poppins antialiased',
                 fontPoppins.variable
                 )}
             >
             <header className='my-7 mx-16 flex justify-between'>
-                <h1 className='text-gray-200 text-3xl font-bold'>Chatterly</h1>
+                <Link href='/' className='text-gray-200 text-3xl font-bold'>Chatterly</Link>
                 <div>
-                    <button>Login</button>
+                    <Link className={buttonVariants({ variant: 'link' })} href='/login'>Login</Link>
+                    <Link className={buttonVariants({ variant: 'outline' })} href='/signup'>Sign Up</Link>
                 </div>
             </header>
             {children}
