@@ -2,7 +2,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <main>Welcome to Chatterly.</main>
+    <main className='text-white'>Welcome to Chatterly.</main>
   )
 }
 
