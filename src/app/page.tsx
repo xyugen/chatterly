@@ -1,6 +1,8 @@
-import { Button, buttonVariants } from '@/components/ui/button'
+import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import React from 'react'
+
+import Image from 'next/image'
 
 const page = () => {
   return (
@@ -17,7 +19,7 @@ const page = () => {
       </div>
 
       <div>
-        <img src='/chatterly.png' alt='Chatterly Logo' className='h-64' />
+        {/* <Image src={} alt='Chatterly Logo' className='h-64' /> */}
       </div>
     </main>
   )
