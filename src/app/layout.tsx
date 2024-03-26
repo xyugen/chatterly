@@ -23,7 +23,7 @@ const layout = (
                 fontPoppins.variable
                 )}
             >
-            <header className='flex justify-between py-2 px-4 sm:py-7 sm:mx-16'>
+            <header className='flex justify-between py-2 px-4 mx-auto mb-10 w-full sm:py-7 sm:w-4/5'>
                 <Link href='/' className='bg-gradient-to-br from-blue-300 to-blue-500 text-transparent bg-clip-text text-3xl font-bold'>Chatterly</Link>
                 <div className='hidden sm:block sm:visible'>
                     <Link className={buttonVariants({ variant: 'link' })} href='/login'>Login</Link>
