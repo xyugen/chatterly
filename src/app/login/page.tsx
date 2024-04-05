@@ -5,7 +5,7 @@ import { Label } from '@/components/ui/label'
 import Link from 'next/link'
 import React from 'react'
 
-const page = () => {
+const LoginForm = () => {
   return (
     <main className='text-gray-100 px-6 md:px-0 mx-auto w-full sm:w-[500px] space-y-12'>
         <Card>
@@ -24,7 +24,7 @@ const page = () => {
             </CardContent>
             <CardFooter className='flex flex-col gap-3'>
                 <Button variant={ 'outline' } className='w-full'>Login</Button>
-                <p>Already have an account? <Link href='/signup' className='text-blue-300 hover:underline underline-offset-2'>Sign Up</Link></p>
+                <p>Don&lsquo;t have an account? <Link href='/signup' className='text-blue-300 hover:underline underline-offset-2'>Sign Up</Link></p>
                 {/* <div className='border-t border-slate-700 w-full mt-5 bg-slate-400'></div> */}
             </CardFooter>
         </Card>
@@ -32,4 +32,4 @@ const page = () => {
   )
 }
 
-export default page
+export default LoginForm
