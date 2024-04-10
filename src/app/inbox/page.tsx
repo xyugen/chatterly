@@ -10,9 +10,17 @@ import User from '@/models/User'
 
 const testData: User[] = [
     { id: '1', username: 'edogawa', name: 'Edogawa', avatarUrl: 'https://i.pravatar.cc/300?img=1', dateJoined: new Date(), lastLogin: new Date(), isOnline: true },
-    { id: '2', username: 'andox', name: 'Karl', avatarUrl: 'https://i.pravatar.cc/300?img=2', dateJoined: new Date(), lastLogin: new Date(), isOnline: true },
+    { id: '2', username: 'andox', name: 'Karl', avatarUrl: 'https://i.pravatar.cc/300?img=2', dateJoined: new Date(), lastLogin: new Date(), isOnline: false },
     { id: '3', username: 'zhacmadic', name: 'Al-V', avatarUrl: 'https://i.pravatar.cc/300?img=3', dateJoined: new Date(), lastLogin: new Date(), isOnline: true },
     { id: '4', username: 'yugen', name: 'Yugen', avatarUrl: 'https://i.pravatar.cc/300?img=4', dateJoined: new Date(), lastLogin: new Date(), isOnline: true },
+    { id: '5', username: 'jocel', name: 'Jocel', avatarUrl: 'https://i.pravatar.cc/300?img=5', dateJoined: new Date(), lastLogin: new Date(), isOnline: false },
+    { id: '6', username: 'joml', name: 'Jomel', avatarUrl: 'https://i.pravatar.cc/300?img=6', dateJoined: new Date(), lastLogin: new Date(), isOnline: false },
+    { id: '7', username: 'jocel', name: 'Jaja Coleen', avatarUrl: 'https://i.pravatar.cc/300?img=7', dateJoined: new Date(), lastLogin: new Date(), isOnline: true },
+    { id: '8', username: 'jocel', name: 'Wallahi', avatarUrl: 'https://i.pravatar.cc/300?img=8', dateJoined: new Date(), lastLogin: new Date(), isOnline: false },
+    { id: '9', username: 'jocel', name: 'Wallahi', avatarUrl: 'https://i.pravatar.cc/300?img=8', dateJoined: new Date(), lastLogin: new Date(), isOnline: false },
+    { id: '10', username: 'jocel', name: 'Wallahi', avatarUrl: 'https://i.pravatar.cc/300?img=8', dateJoined: new Date(), lastLogin: new Date(), isOnline: false },
+    { id: '11', username: 'jocel', name: 'Wallahi', avatarUrl: 'https://i.pravatar.cc/300?img=8', dateJoined: new Date(), lastLogin: new Date(), isOnline: false },
+    { id: '12', username: 'jocel', name: 'asdf', avatarUrl: 'https://i.pravatar.cc/300?img=12', dateJoined: new Date(), lastLogin: new Date(), isOnline: false },
 ]
 
 const Sidebar = () => {
@@ -24,7 +32,7 @@ const Sidebar = () => {
 
     return (
         <div className='text-gray-100'>
-            <div className="sidebar w-80 h-screen bg-slate-800 border-r border-slate-700">
+            <div className="sidebar flex flex-col w-80 h-screen bg-slate-800 border-r border-slate-700">
                 <div className='flex p-3 flex-col gap-3 border-b border-slate-700'>
                     <div className='flex h-10 items-center justify-between'>
                         <h1 className='text-xl'>Inbox</h1>
@@ -36,7 +44,7 @@ const Sidebar = () => {
                     </div>
                 </div>
 
-                <div className='select-none'>
+                <div className='select-none overflow-y-auto flex-1'>
                     {testData.map((contact) => (
                         <MessageCard
                             key={contact.id}
